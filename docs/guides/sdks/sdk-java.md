@@ -1,0 +1,1 @@
+{!external-sources/sdk-java.md!lines=1-6 20-140}

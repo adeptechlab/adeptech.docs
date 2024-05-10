@@ -1,0 +1,117 @@
+site_name: Onqlave Platform
+site_author: Onqlave Pty
+
+copyright: Copyright &copy; 2022 - 2023 Onqlave Pty
+extra:
+    social:
+      - icon: material/linkedin
+        link: https://www.linkedin.com/company/onqlave/
+    generator: false
+    version:
+      provider: mike
+      default: 0.0.1
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+
+theme:
+  name: material
+  logo: img/favicon.ico
+  favicon: img/favicon.ico
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  plugins:
+    - glightbox
+    - search
+    - navigation
+    - typeset 
+    - mike:
+        alias_type: symlink
+        redirect_template: null
+        deploy_prefix: ''
+        canonical_version: null
+        version_selector: true
+        css_dir: css
+        javascript_dir: js
+  features:
+    - annouce.dismiss
+    - navigation.indexes
+    - navigation.footer
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.path
+    - navigation.sections
+    - navigation.expand
+    - toc.follow
+    - search.highlight
+    - search.share
+    - search.suggest
+    - header.autohide
+    - content.code.copy
+
+markdown_extensions: 
+  - attr_list
+  - def_list
+  - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - markdown_include.include:
+      base_path: docs
+  
+
+nav:
+  - Home: index.md
+  - "Introduction": introduction/architecture.md
+  - "Getting started": 
+    - "Quick start": getting-started/quick-start.md
+  - "Guides":
+      - "Dashboard Interface":
+          - "Overview - Dashboard": guides/web-app-guide/overview-gui.md
+          - "Authentication": guides/web-app-guide/authentication.md
+          - "Administration":
+              - "Arx": guides/web-app-guide/administration/arx.md
+              - "Application": guides/web-app-guide/administration/application.md
+              - "API Key": guides/web-app-guide/administration/apikey.md
+          - "Platform":
+              - "Account": guides/web-app-guide/platform/account.md
+              - "Access": guides/web-app-guide/platform/access.md
+      - "Command Line Interface":
+          - "Overview - CLI": guides/cli-guide/overview-cli.md
+          - "Authentication": guides/cli-guide/authentication.md
+          - "Administration":
+              - "Arx": guides/cli-guide/administration/arx.md
+              - "Application": guides/cli-guide/administration/application.md
+              - "API Key": guides/cli-guide/administration/apikey.md
+          - "Platform":
+              - "Account": guides/cli-guide/platform/account.md
+              - "Access": guides/cli-guide/platform/access.md
+      - "SDKs": 
+        - "Go": guides/sdks/sdk-go.md
+        - "NodeJS": guides/sdks/sdk-node.md
+        - "Python": guides/sdks/sdk-py.md 
+        - "Java": guides/sdks/sdk-java.md
+        - "PHP": guides/sdks/sdk-php.md   
+        - "C#": guides/sdks/sdk-c-sharp.md
+        - "Ruby": guides/sdks/sdk-ruby.md
+        - "Rust": guides/sdks/sdk-rust.md
+        - "Swift": guides/sdks/sdk-swift.md
+        - "Flutter": guides/sdks/sdk-flutter.md
